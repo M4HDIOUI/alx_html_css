@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <small>Enter a valid email address (e.g., example@example.com)</small>
+
+        <!-- Feedback Options -->
+        <label>Feedback Options:</label><br>
+        <input type="checkbox" id="excellent" name="feedback[]" value="excellent">
+        <label for="excellent">Excellent</label><br>
+        <input type="checkbox" id="good" name="feedback[]" value="good">
+        <label for="good">Good</label><br>
+        <input type="checkbox" id="average" name="feedback[]" value="average">
+        <label for="average">Average</label><br>
+        <input type="checkbox" id="poor" name="feedback[]" value="poor">
+        <label for="poor">Poor</label><br>
+
+        <!-- File Upload Field -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" required accept=".pdf, .doc, .docx, .txt">
+        <small>Upload a PDF, Word document, or text file.</small>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

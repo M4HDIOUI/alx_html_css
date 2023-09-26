@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="submit.php" method="POST">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <small>Enter a valid email address (e.g., example@example.com)</small>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- Confirm Password Field -->
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <!-- Password Matching Check -->
+        <p id="password-match-error" style="color: red;"></p>
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        // JavaScript to check if password fields match
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm-password");
+        const passwordMatchError = document.getElementById("password-match-error");
+
+        confirmPassword.addEventListener("input", () => {
+            if (password.value !== confirmPassword.value) {
+                passwordMatchError.textContent = "Passwords do not match";
+            } else {
+                passwordMatchError.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

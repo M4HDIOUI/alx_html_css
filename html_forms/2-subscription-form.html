@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Form</title>
+</head>
+<body>
+    <h1>Subscription Form</h1>
+    <form action="submit.php" method="POST">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <small>Enter a valid email address (e.g., example@example.com)</small>
+
+        <!-- Subscription Preference -->
+        <label>Subscription Preference:</label><br>
+        <input type="radio" id="monthly" name="subscription" value="monthly" required>
+        <label for="monthly">Monthly</label><br>
+        <input type="radio" id="yearly" name="subscription" value="yearly" required>
+        <label for="yearly">Yearly</label><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Subscribe</button>
+    </form>
+</body>
+</html>
