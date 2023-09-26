@@ -1,0 +1,24 @@
+/* Global Styles */
+/* ... (same as in 0-styles.css) ... */
+
+/* Grid Styles */
+.row {
+    display: flex;
+  }
+  
+  /* Main Styles */
+  /* ... (same as in 0-styles.css) ... */
+  
+  /* Additional Styles (specific to the provided HTML template) */
+  .section-hero {
+    /* ... (same as in 0-styles.css) ... */
+  }
+  
+  /* Section SERVICES ============================= */
+  .section-services .row {
+    /* Wrap the flex items */
+    flex-wrap: wrap;
+  }
+  
+  /* ... (other card styles, same as in 0-styles.css) ... */
+  
